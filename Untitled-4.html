@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #fc9d22;
+  }
+
+  .container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #0c9623;
+    border-radius: 5px;
+    box-shadow: 0px 2px 5px hwb(266 25% 36% / 0.1);
+  }
+
+  h1 {
+    text-align: center;
+  }
+
+  .rating {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+  }
+
+  .rating label {
+    font-size: 24px;
+    color: #e41414;
+    margin: 0 10px;
+    cursor: pointer;
+  }
+
+  .rating input[type="radio"] {
+    display: none;
+  }
+
+  .rating label:before {
+    content: "\2605";
+    font-size: 36px;
+  }
+
+  .rating input[type="radio"]:checked ~ label:before {
+    content: "\2605";
+    color: #f39c12;
+  }
+
+  textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+
+  button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin-top: 20px;
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  button:hover {
+    background-color: #2980b9;
+  }
+</style>
+<title>Avaliação de Atendimento</title>
+</head>
+<body>
+<div class="container">
+  <h1>Avalie nosso Atendimento</h1>
+  <div class="rating">
+    <input type="radio" name="rating" id="star5" value="5">
+    <label for="star5"></label>
+    <input type="radio" name="rating" id="star4" value="4">
+    <label for="star4"></label>
+    <input type="radio" name="rating" id="star3" value="3">
+    <label for="star3"></label>
+    <input type="radio" name="rating" id="star2" value="2">
+    <label for="star2"></label>
+    <input type="radio" name="rating" id="star1" value="1">
+    <label for="star1"></label>
+  </div>
+  <textarea placeholder="Deixe seus comentários aqui"></textarea>
+  <button>Enviar Avaliação</button>
+</div>
+</body>
+</html>
